@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkRomasGestInventaire"]=self["webpackChunkRomasGestInventaire"]||[]).push([[9855],{69855:(e,s,a)=>{a.r(s),a.d(s,{default:()=>t});var n=a(22188),r=a(27978);class t extends r.A{decodeBlock(e){return(0,n.UD)(new Uint8Array(e)).buffer}}}}]);
-//# sourceMappingURL=9855.e3267c11.js.map

@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkRomasGestInventaire"]=self["webpackChunkRomasGestInventaire"]||[]).push([[3446],{33446:(t,e,n)=>{n.r(e),n.d(e,{default:()=>o});var a=n(56768),s=n(73587);const r={class:"nav-link",target:"_blank",href:"https://docs.pixelstrap.net/vue/mofi/document/","data-original-title":""};function l(t,e){return(0,a.uX)(),(0,a.CE)("a",r,e[0]||(e[0]=[(0,a.Lk)("div",null,[(0,a.Lk)("img",{src:s,alt:"setting"})],-1),(0,a.Lk)("span",null,"Document",-1)]))}var i=n(71241);const u={},c=(0,i.A)(u,[["render",l]]),o=c}}]);
-//# sourceMappingURL=3446.0598f710.js.map

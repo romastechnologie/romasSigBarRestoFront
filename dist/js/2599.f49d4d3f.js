@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkRomasGestInventaire"]=self["webpackChunkRomasGestInventaire"]||[]).push([[2599],{32599:(t,a,e)=>{e.r(a),e.d(a,{default:()=>o});var n=e(56768),s=e(18034);const r={class:"nav-link",target:"_blank",href:"https://support.pixelstrap.com/","data-original-title":""};function l(t,a){return(0,n.uX)(),(0,n.CE)("a",r,a[0]||(a[0]=[(0,n.Lk)("div",null,[(0,n.Lk)("img",{src:s,alt:"support"})],-1),(0,n.Lk)("span",null,"Support",-1)]))}var p=e(71241);const u={},i=(0,p.A)(u,[["render",l]]),o=i}}]);
-//# sourceMappingURL=2599.f49d4d3f.js.map
