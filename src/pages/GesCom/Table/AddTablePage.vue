@@ -1,18 +1,18 @@
 <template>
-    <AddFamilleModal />
+    <AddTableModal />
   </template>
   
   <script lang="ts">
     import { defineComponent } from "vue";
   
     
-    import AddFamilleModal from "@/components/GesCom/Famille/AddFamilleModal.vue";
+    import AddTableModal from "@/components/GesCom/Table/AddTableModal.vue";
   
     export default defineComponent({
-      name: "AddFamillePage",
+      name: "AddTablePage",
       components: {
         
-        AddFamilleModal,
+        AddTableModal,
       },
     });
   </script>

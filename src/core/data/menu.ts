@@ -402,6 +402,25 @@ export const menu: MenuItem[] = [
                 isPinned: false,
                 role: "ListBanque"
             },
+            {
+                path: "/tables/liste-tables",
+                title: "tables",
+                type: "link",
+                icon: "stroke-learning",
+                icon1: "fill-learning",
+                isPinned: false,
+                //role: "Listable"
+            },
+            {
+                path: "/categoriesProduits/liste-categoriesProduits",
+                title: "categoriesProduits",
+                type: "link",
+                icon: "stroke-learning",
+                icon1: "fill-learning",
+                isPinned: false,
+               // role: "ListFamille"
+            },
+            
             
               {
                 path: "/personnelles/liste-personnel",

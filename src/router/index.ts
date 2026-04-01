@@ -23,7 +23,6 @@ import ListePermissionPage from "@/pages/Permission/ListePermissionPage.vue";
 import ListeConditionnementPage from "@/pages/GesCom/Conditionnement/ListeConditionnementPage.vue"
 
 
-import ListeMotifSuiviPage from '@/pages/GesCom/MotifSuivi/ListeMotifSuiviPage.vue';
 
 import AddRolePage from "@/pages/Role/AddRolePage.vue";
 import ListeRolePage from "@/pages/Role/ListeRolePage.vue";
@@ -37,34 +36,23 @@ import ViewUserPage from "@/pages/Users/ViewUserPage.vue";
 import TableauBordPage from "@/pages/dashbords/TableauBordPage.vue"
 
 //Gescom
-import ListeFamillePage from "@/pages/GesCom/Familles/ListeFamillePage.vue";
+//import ListeFamillePage from "@/pages/GesCom/Familles/ListeFamillePage.vue";
 import AddProduitPage from "@/pages/GesCom/Produit/AddProduitPage.vue";
 import EditProduitPage from "@/pages/GesCom/Produit/EditProduitPage.vue";
 import DupliquerProduitPage from "@/pages/GesCom/Produit/DupliquerProduitPage.vue";
 import ListeProduitPage from "@/pages/GesCom/Produit/ListeProduitPage.vue";
 import ViewProduitPage from "@/pages/GesCom/Produit/ViewProduitPage.vue";
 import ListeMagasinPage from "@/pages/GesCom/Magasin/ListeMagasinPage.vue";
-import AddInventairePage from "@/pages/GesCom/Inventaire/AddInventairePage.vue";
 
 import AddPointVentePage from "@/pages/GesCom/PointVente/AddPointVentePage.vue";
 import EditPointVentePage from "@/pages/GesCom/PointVente/EditPointVentePage.vue";
 import ListePointVentePage from "@/pages/GesCom/PointVente/ListePointVentePage.vue";
-import MiseAJourInventairePage from '@/pages/GesCom/Inventaire/MiseAJourInventairePage.vue';
-import ListeProduitIventairePage from '@/pages/GesCom/Inventaire/ListeProduitIventairePage.vue';
 // import ListeRapportInventairePage from '@/pages/GesCom/Inventaire/ListeRapportInventairePage.vue';
-import ListeInventairePage from '@/pages/GesCom/Inventaire/ListeInventairePage.vue';
-import ListeFicheInventairePage from '@/pages/GesCom/Inventaire/ListeFicheInventairePage.vue';
-import EditeFicheInventairePage from "@/pages/GesCom/Inventaire/EditeFicheInventairePage.vue";
 
 
 //Etats
-import DetailInventairePage from "@/pages/GesCom/Inventaire/DetailInventairePage.vue";
 
-import AddMouvementPage from '@/pages/GesCom/Mouvement/AddMouvementPage.vue';
-import ListMouvementPage from '@/pages/GesCom/Mouvement/ListeMouvementPage.vue';
 
-import AddMouvementFichePage from '@/pages/GesCom/MouvementFiche/AddMouvementFichePage.vue';
-import ListMouvementFichePage from '@/pages/GesCom/MouvementFiche/ListeMouvementFichePage.vue';
 
 import ApiService from '@/services/ApiService';
 
@@ -75,10 +63,6 @@ import AddClientPage from '@/pages/GesCom/Client/AddClientPage.vue'
 import EditClientPage from '@/pages/GesCom/Client/EditClientPage.vue'
 import ViewClientPage from '@/pages/GesCom/Client/ViewClientPage.vue'
 import ListeClientPage from '@/pages/GesCom/Client/ListeClientPage.vue'
-import AddFicheStockPage from '@/pages/GesCom/FicheStock/AddFicheStockPage.vue'
-import ListeFicheStockPage from '@/pages/GesCom/FicheStock/ListeFicheStockPage.vue'
-import ListeControlPage from '@/pages/GesCom/Control/ListeControlPage.vue'
-import AddControlPage from '@/pages/GesCom/Control/AddControlPage.vue'
 import ListeChampsLibreFamillePage from '@/pages/ChampsLibre/ListeChampsLibreFamillePage.vue'
 import EditChampsLibreFamillePage from '@/pages/ChampsLibre/EditChampsLibreFamillePage.vue'
 import AddChampsLibreFamillePage from '@/pages/ChampsLibre/AddChampsLibreFamillePage.vue'
@@ -88,62 +72,21 @@ import AddChampsLibrePage from '@/pages/ChampsLibre/AddChampsLibrePage.vue'
 import ListeGroupeTaxePage from '@/pages/GesCom/GroupeTaxe/ListeGroupeTaxePage.vue'
 import ListeTypeTaxePage from '@/pages/GesCom/TypeTaxe/ListeTypeTaxePage.vue'
 import ListeTaxePage from '@/pages/GesCom/Taxe/ListeTaxePage.vue'
-import ListeMarquePage from '@/pages/GesCom/Marque/ListeMarquePage.vue'
-import ListeCodificationPage from '@/pages/GesCom/Codification/ListeCodificationPage.vue'
-import AddBonLivraisonPage from '@/pages/GesCom/BonLivraison/AddBonLivraisonPage.vue'
-import ListeBonLivraisonPage from '@/pages/GesCom/BonLivraison/ListeBonLivraisonPage.vue'
 import AddProduitConditionnementPage from '@/pages/GesCom/Produit/AddProduitConditionnementPage.vue'
-import ViewBonLivraisonPage from '@/pages/GesCom/BonLivraison/ViewBonLivraisonPage.vue'
-import ListeBonRetourPage from '@/pages/GesCom/BonRetour/ListeBonRetourPage.vue'
-import AddBonRetourPage from '@/pages/GesCom/BonRetour/AddBonRetourPage.vue'
-import ViewBonRetourPage from '@/pages/GesCom/BonRetour/ViewBonRetourPage.vue'
-import ListeBonCommandeFournisseurPage from '@/pages/GesCom/BonCommandeFournisseur/ListeBonCommandeFournisseurPage.vue'
-import AddBonCommandeFournisseurPage from '@/pages/GesCom/BonCommandeFournisseur/AddBonCommandeFournisseurPage.vue'
-import ViewBonCommandeFournisseurPage from '@/pages/GesCom/BonCommandeFournisseur/ViewBonCommandeFournisseurPage.vue'
-import EditFournisseurPage from '@/pages/GesCom/Fournisseur/EditFournisseurPage.vue'
-import ListeFournisseurPage from '@/pages/GesCom/Fournisseur/ListeFournisseurPage.vue'
-import AddFournisseurPage from '@/pages/GesCom/Fournisseur/AddFournisseurPage.vue'
-import ViewFournisseurPage from '@/pages/GesCom/Fournisseur/ViewFournisseurPage.vue'
-import AddCreancePage from '@/pages/GesCom/Creance/AddCreancePage.vue'
-import ListeCreancePage from '@/pages/GesCom/Creance/ListeCreancePage.vue'
-import EditCreancePage from '@/pages/GesCom/Creance/EditCreancePage.vue'
-import ViewCreancePage from '@/pages/GesCom/Creance/ViewCreancePage.vue'
 import ListeReglementPage from '@/pages/GesCom/Reglement/ListeReglementPage.vue'
 import AddReglementPage from '@/pages/GesCom/Reglement/AddReglementPage.vue'
 //import ListeClientPage from '@/pages/GesCom/Client/ListeClientPage.vue'
 import AddModeReglementModal from '@/components/GesCom/ModeReglement/AddModeReglementModal.vue'
 import ListeModeReglement from '@/components/GesCom/ModeReglement/ListeModeReglement.vue'
-import AddBanquePage from '@/pages/GesCom/Banque/AddBanquePage.vue'
-import ListeBanquePage from '@/pages/GesCom/Banque/ListeBanquePage.vue'
-import AddDepotPage from '@/pages/GesCom/Depot/AddDepotPage.vue'
-import ListeDepotPage from '@/pages/GesCom/Depot/ListeDepotPage.vue'
-import ListeTypeComptePage from '@/pages/GesCom/TypeCompte/ListeTypeComptePage.vue'
 import AddTransactionPage from '@/pages/GesCom/Transaction/AddTransactionPage.vue'
 import EditTransactionPage from '@/pages/GesCom/Transaction/EditTransactionPage.vue'
-import ListeTransactionPage from '@/pages/GesCom/Transaction/ListeTransactionPage.vue'
 import ViewTransactionPage from '@/pages/GesCom/Transaction/ViewTransactionPage.vue'
-import EditComptePage from '@/pages/GesCom/Compte/EditComptePage.vue'
-import ListeComptePage from '@/pages/GesCom/Compte/ListeComptePage.vue'
-import AddComptePage from '@/pages/GesCom/Compte/AddComptePage.vue'
 
-import ListeCompteEntreprisePage from '@/pages/GesCom/CompteEntreprise/ListeCompteEntreprisePage.vue'
 import ListeDomaineActivitePage from '@/pages/GesCom/DomaineActivite/ListeDomaineActivitePage.vue'
-import AddRapportRelancePage from '@/pages/GesCom/RapportRelance/AddRapportRelancePage.vue'
-import ListeRapportRelancePage from '@/pages/GesCom/RapportRelance/ListeRapportRelancePage.vue'
-import ListeEcheancePage from '@/pages/GesCom/Echeance/ListeEcheancePage.vue'
-import ListePiecePage from '@/pages/GesCom/Piece/ListePiecePage.vue'
-import AddPiecePage from '@/pages/GesCom/Piece/AddPiecePage.vue'
-import AddClientAffecterPage from '@/pages/GesCom/ClientAffecter/AddClientAffecterPage.vue'
-import ListeClientAffecterPage from '@/pages/GesCom/ClientAffecter/ListeClientAffecterPage.vue'
-import EditClientAffecterPage from '@/pages/GesCom/ClientAffecter/EditClientAffecterPage.vue'
-import ListeContratPage from '@/pages/GesCom/Contrat/ListeContratPage.vue'
-import EditContratPage from '@/pages/GesCom/Contrat/EditContratPage.vue'
-import AddContratPage from '@/pages/GesCom/Contrat/AddContratPage.vue'
 import ClientsTransactionPage from '@/pages/GesCom/Client/ClientsTransactionPage.vue'
 import AddMagasinPage from '@/pages/GesCom/Magasin/AddMagasinPage.vue'
 import EditMagasinPage from '@/pages/GesCom/Magasin/EditMagasinPage.vue'
 import ListeMesClientsPage from '@/pages/GesCom/MesClients/ListeMesClientsPage.vue'
-import AddDemandePrixPage from '@/pages/GesCom/DemandePrix/AddDemandePrixPage.vue'
 import AddVentePage from '@/pages/GesCom/Vente/AddVentePage.vue'
 import TransformerProformaPage from '@/pages/GesCom/Vente/TransformerProformaPage.vue'
 import ListeVentePage from '@/pages/GesCom/Vente/ListeVentePage.vue'
@@ -173,24 +116,14 @@ import ViewTransfertPage from '@/pages/GesCom/Transfert/ViewTransfertPage.vue'
 import AddApprovisionnementPage from '@/pages/GesCom/Approvisionnement/AddApprovisionnementPage.vue'
 import ListeApprovisionnementPage from '@/pages/GesCom/Approvisionnement/ListeApprovisionnementPage.vue'
 import ViewApprovisionnementPage from '@/pages/GesCom/Approvisionnement/ViewApprovisionnementPage.vue'
-import ViewLivraisonPage from '@/pages/GesCom/Livraison/ViewLivraisonPage.vue'
-import ListeLivraisonPage from '@/pages/GesCom/Livraison/ListeLivraisonPage.vue'
-import AddLivraisonPage from '@/pages/GesCom/Livraison/AddLivraisonPage.vue'
 import AddCaissePage from '@/pages/GesCom/Caisse/AddCaissePage.vue'
 import AddFermPage from '@/pages/GesCom/OuvFerm/AddFermPage.vue'
 import AddOuvFermPage from '@/pages/GesCom/OuvFerm/AddOuvFermPage.vue'
 import ListeCaissePage from '@/pages/GesCom/Caisse/ListeCaissePage.vue'
 import ViewOuvFermPage from '@/pages/GesCom/OuvFerm/ViewOuvFermPage.vue'
-import ListeMonnaiesDisponiblesPage from '@/pages/GesCom/OuvFerm/ListeMonnaiesDisponiblesPage.vue'
 import ListeOuvFermPage from '@/pages/GesCom/OuvFerm/ListeOuvFermPage.vue'
-import ListeMonnaiePage from '@/pages/GesCom/Monnaie/ListeMonnaiePage.vue'
-import AddMonnaiePage from '@/pages/GesCom/Monaie/AddMonnaiePage.vue'
 import ListeFacturePage from '@/pages/GesCom/Facture/ListeFacturePage.vue'
 import ListeFactureProformaPage from '@/pages/GesCom/FactureProforma/ListeFactureProformaPage.vue'
-import ListeCategorieClientPage from '@/pages/GesCom/CategorieClient/ListeCategorieClientPage.vue'
-import AddPaiementPage from '@/pages/GesCom/Paiement/AddPaiementPage.vue'
-import ListePaiementPage from '@/pages/GesCom/Paiement/ListePaiementPage.vue'
-import ViewPaiementPage from '@/pages/GesCom/Paiement/ViewPaiementPage.vue'
 import HistoriquePrixProduitPage from '@/pages/GesCom/Produit/HistoriquePrixProduitPage.vue'
 import ListePrixProduitCondTypeClientPage from '@/pages/GesCom/PrixProduitCondTypeClient/ListePrixProduitCondTypeClientPage.vue'
 import AddPrixProduitCondTypeClientPage2 from '@/pages/GesCom/PrixProduitCondTypeClient/AddPrixProduitCondTypeClientPage2.vue'
@@ -199,9 +132,6 @@ import EditSocietePage from '@/pages/GesCom/Societe/EditSocietePage.vue'
 import ListeSocietePage from '@/pages/GesCom/Societe/ListeSocietePage.vue'
 import ViewSocietePage from '@/pages/GesCom/Societe/ViewSocietePage.vue'
 import AddSocietePage from '@/pages/GesCom/Societe/AddSocietePage.vue'
-import ListeDemandePrixPage from '@/pages/GesCom/DemandePrix/ListeDemandePrixPage.vue'
-import ViewDemandePrixPage from '@/pages/GesCom/DemandePrix/ViewDemandePrixPage.vue'
-import EditDemandePrixPage from '@/pages/GesCom/DemandePrix/EditDemandePrixPage.vue'
 import AddPersonnellePage from '@/pages/GesCom/Personnel/AddPersonnellePage.vue'
 import ListePersonnellePage from '@/pages/GesCom/Personnel/ListePersonnellePage.vue'
 import ViewPersonnellePage from '@/pages/GesCom/Personnel/ViewPersonnellePage.vue'
@@ -212,6 +142,9 @@ import ListeModeleSignatairePage from '@/pages/GesCom/ModeleSignataire/ListeMode
 import ListFonctionPage from '@/pages/GesCom/Fonction/ListFonctionPage.vue'
 import AddFonctionPage from '@/pages/GesCom/Fonction/AddFonctionPage.vue'
 import ConfirmationPaiementPage from '@/pages/GesCom/OuvFerm/ConfirmationPaiementPage.vue'
+import ListeTablePage from '@/pages/GesCom/Table/ListeTablePage.vue'
+import AddTablePage from '@/pages/GesCom/Table/AddTablePage.vue'
+import ListeCategorieProduitPage from '@/pages/GesCom/CategorieProduit/ListeCategorieProduitPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -562,20 +495,22 @@ const routes: Array<RouteRecordRaw> = [
       }
     ]
   },
-  {
-    path: "/familles",
-    component: BodyView,
-    children: [
-      {
-        path: "liste-familles",
-        name: "ListeFamille",
-        component: ListeFamillePage,
-        meta: {
-          title: 'Liste des familles',
-        }
-      },
-    ]
-  },
+  // {
+  //   path: "/familles",
+  //   component: BodyView,
+  //   children: [
+  //     {
+  //       path: "liste-familles",
+  //       name: "ListeFamille",
+  //       component: ListeFamillePage,
+  //       meta: {
+  //         title: 'Liste des familles',
+  //       }
+  //     },
+  //   ]
+  // },
+
+  
 
   {
     path: "/produits",
@@ -706,6 +641,29 @@ const routes: Array<RouteRecordRaw> = [
         component: AddModeReglementModal,
         meta: {
           title: 'Ajouter un mode de règlement'
+        }
+      },
+    ]
+  },
+  
+{
+    path: "/tables",
+    component: BodyView,
+    children: [
+      {
+        path: "liste-tables",
+        name: "ListeTable",
+        component: ListeTablePage,
+        meta: {
+          title: 'Liste des tables'
+        }
+      },
+      {
+        path: "add-table",
+        name: "AddTable",
+        component: AddTablePage,
+        meta: {
+          title: 'Ajouter une table'
         }
       },
     ]
@@ -885,6 +843,21 @@ const routes: Array<RouteRecordRaw> = [
       },
     ]
   },
+   {
+    path: "/categoriesProduits",
+    component: BodyView,
+    children: [
+      {
+        path: "liste-categoriesProduits",
+        name: "ListeCategorieProduit",
+        component: ListeCategorieProduitPage,
+        meta: {
+          title: 'Liste des catégories',
+        }
+      },
+    ]
+  },
+
 
   {
     path: "/sorties",
