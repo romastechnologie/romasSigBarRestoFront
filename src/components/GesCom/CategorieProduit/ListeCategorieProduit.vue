@@ -103,12 +103,13 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
 import Swal from "sweetalert2";
-import { CategorieProduit } from "@/models/CategorieProduit";
+
 import ApiService from "@/services/ApiService";
 import { suppression, error, showModal } from "@/utils/utils";
 import PaginationComponent from '@/components/Utilities/Pagination.vue';
 import JwtService from "@/services/JwtService";
 import AddCategorieProduitModal from "./AddCategorieProduitModal.vue";
+import { CategorieProduit } from "@/models/CategorieProduit";
 
 export default defineComponent({
   name: "ListeCategorieProduit",
