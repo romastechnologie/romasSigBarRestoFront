@@ -26,7 +26,7 @@ export const menu: MenuItem[] = [
         icon1: "fill-home",
         active: false,
         isPinned: false,
-        role: "DashBord"
+        //role: "DashBord"
     },
 
 
@@ -34,8 +34,8 @@ export const menu: MenuItem[] = [
         headTitle1: "Gestion des inventaires",
         headTitle2: "Gestion des inventaires",
         type: "headtitle",
-        //role: "ListProduit"
-        role: "ListProduit|ListFamille|ListConditionnement|ListMagasin|AddMouvement|EtatInventaire|ListMouvement"
+        ////role: "ListProduit"
+        ////role: "ListProduit|ListFamille|ListConditionnement|ListMagasin|AddMouvement|EtatInventaire|ListMouvement"
     },
     {
         title: "Gestion des produits",
@@ -45,7 +45,7 @@ export const menu: MenuItem[] = [
         badgeType: "light-primary",
         active: false,
         isPinned: false,
-        role: "ListProduit",
+        ////role: "ListProduit",
         children: [
             {
                 path: "/produits/liste-produits",
@@ -54,7 +54,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListProduit"
+                ////role: "ListProduit"
             },
             {
                 path: "/familles/liste-familles",
@@ -63,7 +63,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListFamille"
+                ////role: "ListFamille"
             },
             {
                 path: "/conditionnements/liste-conditionnements",
@@ -72,7 +72,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListConditionnement"
+                //role: "ListConditionnement"
             },
 
             {
@@ -82,7 +82,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListMarque"
+                //role: "ListMarque"
             },
 
         ]
@@ -98,7 +98,7 @@ export const menu: MenuItem[] = [
         badgeType: "light-primary",
         active: false,
         isPinned: false,
-        role: "ListeClient|ListeContrat|AddContrat|ListCompte|AddCompte|AddClient|ListeMesClients",
+        //role: "ListeClient|ListeContrat|AddContrat|ListCompte|AddCompte|AddClient|ListeMesClients",
         children: [
             {
                 path: "/clients/liste-clients",
@@ -107,7 +107,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListeClient"
+                //role: "ListeClient"
             },
     
              
@@ -118,7 +118,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListeMesClients"
+                //role: "ListeMesClients"
             },
             
         ]
@@ -133,13 +133,13 @@ export const menu: MenuItem[] = [
         badgeType: "light-primary",
         active: false,
         isPinned: false,
-        role: "ListReglement|AddReglement",
+        //role: "ListReglement|AddReglement",
         children: [
             {
                 path: "/reglements/liste-reglements",
                 title: "Règlements",
                 type: "link",
-                role: "ListReglement"
+                //role: "ListReglement"
             },
             
         ]
@@ -347,7 +347,7 @@ export const menu: MenuItem[] = [
         badgeType: "light-primary",
         active: false,
         isPinned: false,
-        role: "ListProduit|ListFamille|ListeFamilleProduitChampsLibres|AddFamilleProduitChampsLibres|ListConditionnement|ListMotifSuivi|ListMagasin|ListPointVente|AddChampsLibre|AddClient|ListClient|ListMarque|ListeCodification|ListDomaineActivite|ListTaxe|ListTypeTaxe|ListModeRegelement|ListPiece|ListBanque|ListCompteEntreprise|ListeClientAffecters",
+       // //role: "ListProduit|ListFamille|ListeFamilleProduitChampsLibres|AddFamilleProduitChampsLibres|ListConditionnement|ListMotifSuivi|ListMagasin|ListPointVente|AddChampsLibre|AddClient|ListClient|ListMarque|ListeCodification|ListDomaineActivite|ListTaxe|ListTypeTaxe|ListModeRegelement|ListPiece|ListBanque|ListCompteEntreprise|ListeClientAffecters",
         children: [
             {
                 path: "/magasins/liste-magasins",
@@ -356,7 +356,7 @@ export const menu: MenuItem[] = [
                 icon1: "fill-learning",
                 isPinned: false,
                 type: "link",
-                role: "ListMagasin"
+                //role: "ListMagasin"
             },
             {
                 path: "/domaines/liste-domaines",
@@ -365,7 +365,7 @@ export const menu: MenuItem[] = [
                 icon1: "fill-learning",
                 isPinned: false,
                 type: "link",
-                role: "ListDomaineActivite"
+                //role: "ListDomaineActivite"
             },
             {
                 path: "/point-ventes/liste-point-ventes",
@@ -374,7 +374,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListPointVente"
+                //role: "ListPointVente"
             },
             {
                 path: "/liste-groupe-taxes",
@@ -391,7 +391,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListTaxe"
+                //role: "ListTaxe"
             },
             {
                 path: "/banques/liste-banques",
@@ -400,7 +400,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListBanque"
+                //role: "ListBanque"
             },
             {
                 path: "/tables/liste-tables",
@@ -409,7 +409,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                //role: "Listable"
+                ////role: "Listable"
             },
             {
                 path: "/categoriesProduits/liste-categoriesProduits",
@@ -418,7 +418,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-               // role: "ListFamille"
+               // //role: "ListFamille"
             },
             
             
@@ -441,7 +441,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListTypeTaxe"
+                //role: "ListTypeTaxe"
             },
 
             {
@@ -451,7 +451,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                // role: "ListModeReglement"
+                // //role: "ListModeReglement"
             },
             {
                 path: "/typeDocuments/liste-typeDocuments",
@@ -460,7 +460,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                // role: "ListModeReglement"
+                // //role: "ListModeReglement"
             },
 
 
@@ -471,7 +471,7 @@ export const menu: MenuItem[] = [
                 icon: "stroke-learning",
                 icon1: "fill-learning",
                 isPinned: false,
-                role: "ListModeReglement"
+                //role: "ListModeReglement"
             },
            
             {
@@ -482,19 +482,19 @@ export const menu: MenuItem[] = [
                 badgeType: "light-primary",
                 active: false,
                 isPinned: false,
-                role: "ListeChampsLibre",
+                //role: "ListeChampsLibre",
                 children: [
                     {
                         path: "/champsLibres/ajouter-champsLibre",
                         title: "Ajouter un champ",
                         type: "link",
-                        role: "AddChampsLibre"
+                        //role: "AddChampsLibre"
                     },
                     {
                         path: "/champsLibres/liste-champsLibre",
                         title: "Liste des champs",
                         type: "link",
-                        role: "ListeChampsLibre"
+                        //role: "ListeChampsLibre"
                     },
 
                 ]
@@ -507,20 +507,20 @@ export const menu: MenuItem[] = [
                 badgeType: "light-primary",
                 active: false,
                 isPinned: false,
-                role: "ListeFamilleProduitChampsLibres",
+                //role: "ListeFamilleProduitChampsLibres",
                 children: [
                     {
                         path: "/champsLibreFamille/ajouter-champsLibreFamille",
                         title: "Affecter un champ",
                         type: "link",
-                        role: "AddFamilleProduitChampsLibres"
+                        //role: "AddFamilleProduitChampsLibres"
                     },
 
                     {
                         path: "/champsLibreFamille/liste-champsLibreFamille",
                         title: "Liste des champs affectés",
                         type: "link",
-                        role: "ListeFamilleProduitChampsLibres"
+                        //role: "ListeFamilleProduitChampsLibres"
                     },
                 ]
 
@@ -535,7 +535,7 @@ export const menu: MenuItem[] = [
         headTitle1: "Gestion des utilisateurs",
         headTitle2: "Utilisateurs, Rôles et permissions",
         type: "headtitle",
-        role: "AddUser|ListUser|AddRole|ListRole|ListPermission"
+        //role: "AddUser|ListUser|AddRole|ListRole|ListPermission"
     },
 
     {
@@ -546,7 +546,7 @@ export const menu: MenuItem[] = [
         badgeType: "light-primary",
         active: false,
         isPinned: false,
-        role: "ListUser",
+        //role: "ListUser",
         children: [
 
             {
@@ -557,19 +557,19 @@ export const menu: MenuItem[] = [
                 badgeType: "light-primary",
                 active: false,
                 isPinned: false,
-                role: "ListUser",
+                //role: "ListUser",
                 children: [
                     {
                         path: "/utilisateurs/ajouter-utilisateur",
                         title: "Ajouter un utilisateur",
                         type: "link",
-                        role: "AddUser"
+                        //role: "AddUser"
                     },
                     {
                         path: "/utilisateurs/liste-utilisateur",
                         title: "Liste des utilisateurs",
                         type: "link",
-                        role: "ListUser"
+                        //role: "ListUser"
                     },
                 ]
             },
@@ -581,19 +581,19 @@ export const menu: MenuItem[] = [
                 badgeType: "light-primary",
                 active: false,
                 isPinned: false,
-                role: "ListRole",
+                //role: "ListRole",
                 children: [
                     {
                         path: "/roles/ajouter-role",
                         title: "Ajouter un rôle",
                         type: "link",
-                        role: "AddRole"
+                        //role: "AddRole"
                     },
                     {
                         path: "/roles/liste-role",
                         title: "Liste des rôles",
                         type: "link",
-                        role: "ListRole"
+                        //role: "ListRole"
                     },
                 ]
             },
@@ -605,13 +605,13 @@ export const menu: MenuItem[] = [
                 badgeType: "light-primary",
                 active: false,
                 isPinned: false,
-                role: "ListPermission",
+                //role: "ListPermission",
                 children: [
                     {
                         path: "/permissions/liste-permission",
                         title: "Liste des permissions",
                         type: "link",
-                        role: "ListPermission"
+                        //role: "ListPermission"
                     },
 
                 ]

@@ -64,6 +64,19 @@
                   <div class="col-md-6">
                     <div class="form-group mb-3 mb-sm-3 mb-md-3">
                       <label class="d-block text-black fw-semibold mb-1">
+                        Catégorie du produit<span class="text-danger">*</span>
+                      </label>
+                      <Field name="categorieProduit" v-slot="{ field }">
+                        <Multiselect :options="categorieOptions" :searchable="true" track-by="label" label="label"
+                          v-model="field.value" v-bind="field"
+                          placeholder="Sélectionner la catégorie" />
+                      </Field>
+                      <ErrorMessage name="categorieProduit" class="text-danger" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-3 mb-sm-3 mb-md-3">
+                      <label class="d-block text-black fw-semibold mb-1">
                         Famille du produit<span class="text-danger">*</span>
                       </label>
                       <Field name="famille" v-slot="{ field }" v-model="famille">
@@ -72,6 +85,19 @@
                           placeholder="Sélectionner la famille" />
                       </Field>
                       <ErrorMessage name="famille" class="text-danger" />
+                    </div>
+                  </div>
+                   <div class="col-md-6">
+                    <div class="form-group mb-3 mb-sm-3 mb-md-3">
+                      <label class="d-block text-black fw-semibold mb-1">
+                        Groupe de taxe<span class="text-danger">*</span>
+                      </label>
+                      <Field name="groupeTaxe" v-slot="{ field }">
+                        <Multiselect :options="groupeTaxeOptions" :searchable="true" track-by="label" label="label"
+                          v-model="field.value" v-bind="field"
+                          placeholder="Sélectionner le groupe" />
+                      </Field>
+                      <ErrorMessage name="groupeTaxe" class="text-danger" />
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -275,6 +301,8 @@ export default defineComponent({
       nomMarche: Yup.string().notRequired(),
       imagePrincipal: Yup.string().notRequired(),
       famille: Yup.string().required("La famille est obligatoire"),
+      categorieProduit: Yup.string().required("La catégorie de produit est obligatoire"),
+      groupeTaxe: Yup.string().required("Le groupe de taxe est obligatoire"),
       uniteGestion: Yup.string().notRequired(),
       uniteStock: Yup.string().notRequired(),
       descProd: Yup.string().notRequired(),
@@ -285,7 +313,12 @@ export default defineComponent({
     const router = useRouter();
     const route = useRoute();
     const familleOptions = ref([]);
+    const categorieOptions = ref([]);
+    const groupeTaxeOptions = ref([]);
+    const groupeTaxe = ref();
+    
     const marqueOptions = ref([]);
+  
     const produitStanOptions = ref([]);
     const produitMarOptions = ref([]);
     const prodName = ref("");
@@ -352,6 +385,7 @@ export default defineComponent({
     const isDisable = ref(true);
     const isDisablee = ref(true);
     const famille = ref();
+    const categorieProduit = ref();
     const unite = ref();
     const conditionnements = reactive([]);
     const conditionnementgOptions = ref([]);
@@ -431,6 +465,35 @@ export default defineComponent({
         marqueOptions.value = marqueData.map((marque) => ({
           value: marque.id,
           label: marque.libelle,
+        }));
+      } catch (error) {
+        //
+      }
+    };
+
+
+const fetchCategorieProduit = async () => {
+      try {
+        const response = await ApiService.get("/categorieProduits");
+        const categorieProduitData = response.data.data.data;
+        console.log(categorieProduitData, "categorieProduitData");
+        categorieOptions.value = categorieProduitData.map((categorieProduit) => ({
+          value: categorieProduit.id,
+          label: `${categorieProduit.code} - ${categorieProduit.libelle} ${categorieProduit.categorieProduit ? '(' + categorieProduit.categorieProduit.libelle + ')' : ""}`,
+        }));
+      } catch (error) {
+        //
+      }
+    };
+
+
+      const fetchGroupTaxe = async () => {
+      try {
+        const response = await ApiService.get("all/groupeTaxes");
+        const groupeTaxeData = response.data.data.data;
+        groupeTaxeOptions.value = groupeTaxeData.map((groupeTaxe) => ({
+          value: `${groupeTaxe.id}|${groupeTaxe.taux}`,
+          label: `${groupeTaxe.libelle}`,
         }));
       } catch (error) {
         //
@@ -892,6 +955,9 @@ export default defineComponent({
       await fetchMarque();
       await fetchConditionnements();
       await fetchConditionnementugs();
+      await fetchCategorieProduit();
+      await fetchGroupTaxe();
+      
       if (route.params.id) {
         await getProduit(parseInt(route.params.id as string));
       }
@@ -910,6 +976,9 @@ export default defineComponent({
       hasFiles,
       produitForm,
       familleOptions,
+      categorieOptions,
+      categorieProduit,
+      groupeTaxeOptions,
       marqueOptions,
       methodeOptions,
       valideteRowProduit,

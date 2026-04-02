@@ -63,6 +63,19 @@
                   <div class="col-md-6">
                     <div class="form-group mb-3 mb-sm-3 mb-md-3">
                       <label class="d-block text-black fw-semibold mb-1">
+                        Catégorie du produit<span class="text-danger">*</span>
+                      </label>
+                      <Field name="categorieProduit" v-slot="{ field }">
+                        <Multiselect :options="categorieOptions" :searchable="true" track-by="label" label="label"
+                          v-model="field.value" v-bind="field"
+                          placeholder="Sélectionner la catégorie" />
+                      </Field>
+                      <ErrorMessage name="categorieProduit" class="text-danger" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-3 mb-sm-3 mb-md-3">
+                      <label class="d-block text-black fw-semibold mb-1">
                         Famille du produit<span class="text-danger">*</span>
                       </label>
                       <Field name="famille" v-slot="{ field }">
@@ -71,6 +84,19 @@
                           placeholder="Sélectionner la famille" />
                       </Field>
                       <ErrorMessage name="famille" class="text-danger" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-3 mb-sm-3 mb-md-3">
+                      <label class="d-block text-black fw-semibold mb-1">
+                        Groupe de taxe<span class="text-danger">*</span>
+                      </label>
+                      <Field name="groupeTaxe" v-slot="{ field }">
+                        <Multiselect :options="groupeTaxeOptions" :searchable="true" track-by="label" label="label"
+                          v-model="field.value" v-bind="field"
+                          placeholder="Sélectionner le groupe" />
+                      </Field>
+                      <ErrorMessage name="groupeTaxe" class="text-danger" />
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -539,8 +565,11 @@ export default defineComponent({
     const router = useRouter();
     const route = useRoute();
     const familleOptions = ref([]);
+    const categorieOptions = ref([]);
     const groupeTaxeOptions = ref([]);
     const famille = ref();
+    const groupeTaxe = ref();
+    const categorieProduit = ref();
     const marqueOptions = ref([]);
     const modeDefPrixOptions = ref([]);
     const produitStanOptions = ref([]);
@@ -1245,6 +1274,20 @@ export default defineComponent({
       }
     };
 
+    const fetchCategorieProduit = async () => {
+      try {
+        const response = await ApiService.get("/categorieProduits");
+        const categorieProduitData = response.data.data.data;
+        console.log(categorieProduitData, "categorieProduitData");
+        categorieOptions.value = categorieProduitData.map((categorieProduit) => ({
+          value: categorieProduit.id,
+          label: `${categorieProduit.code} - ${categorieProduit.libelle} ${categorieProduit.categorieProduit ? '(' + categorieProduit.categorieProduit.libelle + ')' : ""}`,
+        }));
+      } catch (error) {
+        //
+      }
+    };
+    
     const fetchDomaines = async () => {
       try {
         const response = await ApiService.get("/domaines");
@@ -1273,7 +1316,8 @@ export default defineComponent({
     };
 
     const produitSchema = Yup.object().shape({
-      //groupeTaxe: Yup.string().required("Le groupe de taxe est obligatoire"),
+      categorieProduit: Yup.string().required("Le groupe de taxe est obligatoire"),
+      groupeTaxe: Yup.string().required("Le groupe de taxe est obligatoire"),
       marqProd: Yup.string().required("La marque est obligatoire"),
       // modeDefPrix: Yup.string().required("Le mode de prix est obligatoire"),
       suiviStock: Yup.string().required("La méthode de suivi est obligatoire"),
@@ -1350,6 +1394,7 @@ export default defineComponent({
       await fetchConditionnements();
       await fetchConditionnementugs();
       await fetchMarque();
+     await fetchCategorieProduit();
       await fetchDomaines();
       if (route.params.id) {
         console.log("ID from route params:", route.params.id);
@@ -1372,8 +1417,11 @@ export default defineComponent({
       prodNameM,
       addProduit,
       hasFiles,
+      groupeTaxe,
+      categorieProduit,
       produitForm,
       familleOptions,
+      categorieOptions,
       modeDefPrixOptions,
       groupeTaxeOptions,
       marqueOptions,

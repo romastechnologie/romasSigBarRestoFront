@@ -95,7 +95,7 @@ export default defineComponent({
         // .matches(/^[A-Za-z0-9]+$/, "Le code categorieProduit doit être alphanumérique"), // Optionnel : restreindre aux lettres et chiffres
       // Autres champs...
       libelle: Yup.string().required('Le libellé categorieProduit est obligatoire'),
-      categorieProduit: Yup.string().notRequired(),
+      
       
     });
 
@@ -151,7 +151,7 @@ export default defineComponent({
 
     const fetchCategorieProduit = async () => {
       try {
-        const response = await ApiService.get('/all/all/categorieProduits');
+        const response = await ApiService.get('/categorieProduits');
         const categorieProduitData = response.data.data.data;
         categorieProduitOptions.value = categorieProduitData.map((categorieProduit) => ({
           value: categorieProduit.id,
