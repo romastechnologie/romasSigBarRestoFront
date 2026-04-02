@@ -145,6 +145,10 @@ import ConfirmationPaiementPage from '@/pages/GesCom/OuvFerm/ConfirmationPaiemen
 import ListeTablePage from '@/pages/GesCom/Table/ListeTablePage.vue'
 import AddTablePage from '@/pages/GesCom/Table/AddTablePage.vue'
 import ListeCategorieProduitPage from '@/pages/GesCom/CategorieProduit/ListeCategorieProduitPage.vue'
+import AddMetPage from '@/pages/GesCom/Met/AddMetPage.vue'
+import EditMetPage from '@/pages/GesCom/Met/EditMetPage.vue'
+import ListeMetPage from '@/pages/GesCom/Met/ListeMetPage.vue'
+import ViewMetPage from '@/pages/GesCom/Met/ViewMetPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -509,9 +513,6 @@ const routes: Array<RouteRecordRaw> = [
   //     },
   //   ]
   // },
-
-  
-
   {
     path: "/produits",
     component: BodyView,
@@ -666,6 +667,46 @@ const routes: Array<RouteRecordRaw> = [
           title: 'Ajouter une table'
         }
       },
+    ]
+  },
+  {
+    path: "/mets",
+    component: BodyView,
+    children: [
+      {
+        path: "ajouter-met",
+        name: "AddMet",
+        component: AddMetPage,
+        meta: {
+          title: 'Ajouter un met',
+        }
+      },
+      {
+        path: "modifier-met/:id",
+        name: "EditMet",
+        component: EditMetPage,
+        meta: {
+          title: 'Modifier un met',
+        }
+      },
+      
+      {
+        path: "view-met/:id",
+        name: "ViewMet",
+        component: ViewMetPage,
+        meta: {
+          title: 'Détails d\'un met',
+        }
+      },
+      {
+        path: "liste-mets",
+        name: "ListeMet",
+        component: ListeMetPage,
+        meta: {
+          title: 'Liste des mets',
+        }
+      }
+        
     ]
   },
 
