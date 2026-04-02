@@ -27,84 +27,112 @@
                   <ErrorMessage name="prenom" class="text-danger"/>
                 </div>
               </div>
+              <!-- Après téléphone 2, avant religion -->
 
               <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label class="d-block text-black mb-10">
-                                  Situation matrimoniale
-                                  <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="situationMatrimoniale"
-                                  v-model="situationMatrimoniale"
-                                  type="text"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    :searchable="true"
-                                    :options="[
-                                      'Célibataire',
-                                      'Marié(e)',
-                                      'Divorcée',
-                                      'Veuve',
-                                      'Concubinage',
-                                      'Union libre',
-                                    ]"
-                                    v-model="field.value"
-                                    v-bind="field"
-                                    placeholder="Sélectionner la situation"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
+                <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                  <label class="d-block text-black mb-10">
+                    Sexe <span class="text-danger">*</span>
+                  </label>
+                  <Field name="sexe" v-model="sexe" type="text" v-slot="{ field }">
+                    <Multiselect
+                      :searchable="true"
+                      :options="['Masculin', 'Féminin']"
+                      v-model="field.value"
+                      v-bind="field"
+                      placeholder="Sélectionner le sexe"
+                    />
+                  </Field>
+                  <ErrorMessage name="sexe" class="text-danger"/>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                  <label class="d-block text-black mb-10">Nationalité <span class="text-danger">*</span></label>
+                  <Field name="nationalite" v-model="nationalite" type="text"
+                    class="form-control shadow-none fs-md-15 text-black" placeholder="Entrer la nationalité"/>
+                  <ErrorMessage name="nationalite" class="text-danger"/>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                  <label class="d-block text-black mb-10">Boite Postale</label>
+                  <Field name="boitePostale" v-model="boitePostale" type="text"
+                    class="form-control shadow-none fs-md-15 text-black" placeholder="Entrer la boite postale"/>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                  <label class="d-block text-black mb-10">Date de naissance</label>
+                  <Field name="birthdate" v-model="birthdate" type="date"
+                    class="form-control shadow-none fs-md-15 text-black"/>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                  <label class="d-block text-black mb-10">Date d'embauche <span class="text-danger">*</span></label>
+                  <Field name="dateEmbauche" v-model="dateEmbauche" type="date"
+                    class="form-control shadow-none fs-md-15 text-black"/>
+                  <ErrorMessage name="dateEmbauche" class="text-danger"/>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                  <label class="d-block text-black mb-10">
+                    Situation matrimoniale
+                    <span class="text-danger">*</span>
+                  </label>
+                  <Field
+                    name="situationMatrimoniale"
+                    v-model="situationMatrimoniale"
+                    type="text"
+                    v-slot="{ field }"
+                  >
+                    <Multiselect
+                      :searchable="true"
+                      :options="[
+                        'Célibataire',
+                        'Marié(e)',
+                        'Divorcée',
+                        'Veuve',
+                        'Concubinage',
+                        'Union libre',
+                      ]"
+                      v-model="field.value"
+                      v-bind="field"
+                      placeholder="Sélectionner la situation"
+                    />
+                  </Field>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                  <label class="d-block text-black mb-10">
+                    Civilite <span class="text-danger">*</span>
+                  </label>
+                  <Field
+                    name="civilite"
+                    v-model="civilite"
+                    type="text"
+                    v-slot="{ field }"
+                  >
+                    <Multiselect
+                      :searchable="true"
+                      :options="['Mr', 'Mme']"
+                      v-model="field.value"
+                      v-bind="field"
+                      placeholder="Sélectionner la civilité"
+                    />
+                  </Field>
+                </div>
+            </div>
 
             <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label class="d-block text-black mb-10">
-                                  Pays de résidence
-                                  <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="nationalite"
-                                  v-model="nationalite"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    :options="countries"
-                                    :searchable="true"
-                                    track-by="value"
-                                    label="label"
-                                    v-model="field.value"
-                                    v-bind="field"
-                                    placeholder="Sélectionner le pays"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
-
-                            <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label class="d-block text-black mb-10">
-                                  Civilite <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="civilite"
-                                  v-model="civilite"
-                                  type="text"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    :searchable="true"
-                                    :options="['Mr', 'Mme']"
-                                    v-model="field.value"
-                                    v-bind="field"
-                                    placeholder="Sélectionner la civilité"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
-
-                            <div class="col-md-4">
               <div class="form-group mb-15 mb-sm-20 mb-md-25">
                 <label class="d-block text-black fw-semibold mb-10">
                 Email <span class="text-danger">*</span>
@@ -138,56 +166,56 @@
             </div>
 
             <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label class="d-block text-black mb-10">
-                                  Religion <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="religion"
-                                  v-model="religion"
-                                  type="text"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    v-model="field.value"
-                                    v-bind="field"
-                                    :options="religionOptions"
-                                    :preserve-search="true"
-                                    :multiple="false"
-                                    :searchable="true"
-                                    placeholder="Sélectionner la religion"
-                                    label="label"
-                                    track-by="label"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
+              <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                <label class="d-block text-black mb-10">
+                  Religion <span class="text-danger">*</span>
+                </label>
+                <Field
+                  name="religion"
+                  v-model="religion"
+                  type="text"
+                  v-slot="{ field }"
+                >
+                  <Multiselect
+                    v-model="field.value"
+                    v-bind="field"
+                    :options="religionOptions"
+                    :preserve-search="true"
+                    :multiple="false"
+                    :searchable="true"
+                    placeholder="Sélectionner la religion"
+                    label="label"
+                    track-by="label"
+                  />
+                </Field>
+              </div>
+            </div>
 
-                            <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label class="d-block text-black mb-10">
-                                  Ethnie <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="ethnie"
-                                  v-model="ethnie"
-                                  type="text"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    v-model="field.value"
-                                    v-bind="field"
-                                    :options="ethnieOptions"
-                                    :preserve-search="true"
-                                    :multiple="false"
-                                    :searchable="true"
-                                    placeholder="Sélectionner l'ethnie"
-                                    label="label"
-                                    track-by="label"
-                                  />
-                                </Field>
-                              </div>
-                            </div>      
+            <div class="col-md-4">
+              <div class="form-group mb-15 mb-sm-20 mb-md-25">
+                <label class="d-block text-black mb-10">
+                  Ethnie <span class="text-danger">*</span>
+                </label>
+                <Field
+                  name="ethnie"
+                  v-model="ethnie"
+                  type="text"
+                  v-slot="{ field }"
+                >
+                  <Multiselect
+                    v-model="field.value"
+                    v-bind="field"
+                    :options="ethnieOptions"
+                    :preserve-search="true"
+                    :multiple="false"
+                    :searchable="true"
+                    placeholder="Sélectionner l'ethnie"
+                    label="label"
+                    track-by="label"
+                  />
+                </Field>
+              </div>
+            </div>      
 
                          <!--  <div class="col-md-4">
                             <div class="form-group mb-15 mb-sm-20 mb-md-25">
@@ -214,110 +242,6 @@
                                 </Field>
                               </div>
                             </div>--> 
-
-                              <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label
-                                  class="d-block text-black fw-semibold mb-10"
-                                >
-                                  Département <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="departement"
-                                  v-model="departement"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    :options="departementOptions"
-                                    :searchable="true"
-                                    track-by="label"
-                                    label="label"
-                                    v-model="field.value"
-                                    v-bind="field"
-                                    @change="departementChange($event)"
-                                    placeholder="Sélectionner le departement"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label
-                                  class="d-block text-black fw-semibold mb-10"
-                                >
-                                  Communes <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="commune"
-                                  v-model="commune"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    :options="communeOptions"
-                                    @change="communeChange($event)"
-                                    :searchable="true"
-                                    track-by="label"
-                                    label="label"
-                                    v-model="selectedCommune"
-                                    v-bind="field"
-                                    noOptionsText="Sélectionner d'abord un département"
-                                    placeholder="Sélectionner la commune"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label
-                                  class="d-block text-black fw-semibold mb-10"
-                                >
-                                  Arrondissement
-                                  <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="arrondissement"
-                                  v-model="arrondissement"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    :options="arrondissementOptions"
-                                    :searchable="true"
-                                    track-by="label"
-                                    label="label"
-                                    v-model="selectedArrondissement"
-                                    v-bind="field"
-                                    noOptionsText="Sélectionner d'abord une commune"
-                                    @change="arrondissementChange($event)"
-                                    placeholder="Sélectionner l' arrondissement"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="form-group mb-15 mb-sm-20 mb-md-25">
-                                <label
-                                  class="d-block text-black fw-semibold mb-10"
-                                >
-                                  Quartier <span class="text-danger">*</span>
-                                </label>
-                                <Field
-                                  name="quartier"
-                                  v-model="quartier"
-                                  v-slot="{ field }"
-                                >
-                                  <Multiselect
-                                    :options="quartierOptions"
-                                    :searchable="true"
-                                    track-by="label"
-                                    label="label"
-                                    v-model="selectedQuartier"
-                                    v-bind="field"
-                                    noOptionsText="Sélectionner d'abord un arrondissement"
-                                    placeholder="Sélectionner le quartier"
-                                  />
-                                </Field>
-                              </div>
-                            </div>
                          
                           <div class="col-md-12 mt-3">
                             <div class="form-group mb-15 mb-sm-20 mb-md-25">
@@ -351,7 +275,7 @@
             >
                 Modifier le personnel 
             </button>
-            <router-link to="/liste-personnel" 
+            <router-link to="/personnelles/liste-personnel" 
                 class=" btn btn-danger"><i class="fa fa-trash-o lh-1 me-1 position-relative top-2"></i>
                 <span class="position-relative"></span>Annuler</router-link>
           </div>
@@ -386,24 +310,24 @@ export default defineComponent({
   },
   setup: () => {
     const personnelSchema = Yup.object().shape({
-  nom: Yup.string().required("Nom est obligatoire."),
-  prenom: Yup.string().required("Prénom est obligatoire."),
-  situationMatrimoniale: Yup.string().required("Situation est obligatoire."),
-  email: Yup.string().required("Situation est obligatoire."),
-  civilite: Yup.string().required("Civilité est obligatoire."),
-  //pays: Yup.string().required("Pays est obligatoire."),
-  religion: Yup.string().required("Réligion est obligatoire."),
-  ethnie: Yup.string().required("Ethnie est obligatoire."),
-  telephone: Yup.string().required("Téléphone est obligatoire."),
-  telephone2: Yup.string().notRequired(),
-  commune: Yup.string().required("Commune est obligatoire."),
-  departement: Yup.string().required("Département est obligatoire."),
-  arrondissement: Yup.string().required("Arrondissement est obligatoire."),
-  quartier: Yup.string().required("Quartier est obligatoire."),
-  adresse: Yup.string().required("Adrese est obligatoire."),
-  nationalite: Yup.string().required("Nationalite est obligatoire."),
-  
-});
+      nom: Yup.string().required("Nom est obligatoire."),
+      prenom: Yup.string().required("Prénom est obligatoire."),
+      situationMatrimoniale: Yup.string().required("Situation est obligatoire."),
+      email: Yup.string().email("Email invalide").required("Email est obligatoire."),
+      civilite: Yup.string().required("Civilité est obligatoire."),
+      religion: Yup.mixed().required("Religion est obligatoire."),
+      ethnie: Yup.mixed().required("Ethnie est obligatoire."),
+      telephone: Yup.string().required("Téléphone est obligatoire."),
+      telephone2: Yup.string().notRequired(),
+      adresse: Yup.string().required("Adresse est obligatoire."),
+      nationalite: Yup.string().required("Nationalité est obligatoire."),
+      boitePostale: Yup.string().notRequired(),
+      sexe: Yup.string().required("Sexe est obligatoire."),
+      birthdate: Yup.date().notRequired(),
+      dateEmbauche: Yup.date().notRequired(),
+      // ✅ Supprimé : commune, departement, arrondissement, quartier
+      // car absents du formulaire
+    });
     const personnelForm = ref<Personnel>();
       const personnelId = ref();      
     const countriesRef = ref(countries);
@@ -419,7 +343,6 @@ export default defineComponent({
     const commune = ref();
     const departement = ref();
     const adresse= ref();
-    const nationalite = ref();
     const religion = ref();
     const religionOptions = ref([]);
     const ethnie = ref();
@@ -431,8 +354,13 @@ export default defineComponent({
     const telephone = ref();
     const telephone2 = ref();
     const civilite= ref();
+    const nationalite= ref();
+    const sexe= ref();
+    const dateEmbauche=ref();
+    const boitePostale= ref();
     const serviceOptions = ref([]);
     const organisation = ref();
+    const birthdate = ref();
 
 
   
@@ -464,141 +392,18 @@ export default defineComponent({
       }
     };
 
-    function departementChange(value) {
-      console.log("g,rl;m", value);
-      if (value) {
-        communeOptions.value = [];
-        selectedCommune.value = [];
-        selectedArrondissement.value = [];
-        selectedQuartier.value = [];
-        ApiService.get("/departements/communes/" + value)
-          .then(({ data }) => {
-            const donnee = data.data;
-            console.log("donnee", donnee);
-            if (donnee.length > 0) {
-              communeOptions.value = donnee.map((commune: any) => {
-                return {
-                  label: commune.libelle,
-                  value: commune.id,
-                };
-              });
-            }
-          })
-          .catch(({ response }) => {
-            //error(response.data.message);
-          });
-      } else {
-        communeOptions.value = [];
-        selectedCommune.value = [];
-        selectedArrondissement.value = [];
-        selectedQuartier.value = [];
-      }
-    }
-
-    function communeChange(value) {
-      if (value) {
-        arrondissementOptions.value = [];
-        selectedArrondissement.value = [];
-        selectedQuartier.value = [];
-        ApiService.get("/communes/arrondissements/" + value)
-          .then(({ data }) => {
-            const donnee = data.data;
-            if (donnee.length > 0) {
-              arrondissementOptions.value = donnee.map(
-                (arrondissement: any) => {
-                  return {
-                    label: arrondissement.libelle,
-                    value: arrondissement.id,
-                  };
-                }
-              );
-            }
-          })
-          .catch(({ response }) => {
-            //error(response.data.message);
-          });
-      } else {
-        arrondissementOptions.value = [];
-        selectedArrondissement.value = [];
-        selectedQuartier.value = [];
-      }
-    }
-
-    function arrondissementChange(value) {
-      if (value) {
-        quartierOptions.value = [];
-        selectedQuartier.value = [];
-        ApiService.get("/arrondissements/quartiers/" + value)
-          .then(({ data }) => {
-            const donnee = data.data;
-            if (donnee.length > 0) {
-              quartierOptions.value = donnee.map((quartier: any) => {
-                return {
-                  label: quartier.libelle,
-                  value: quartier.id,
-                };
-              });
-            }
-          })
-          .catch(({ response }) => {
-            //error(response.data.message);
-          });
-      } else {
-        quartierOptions.value = [];
-        selectedQuartier.value = [];
-      }
-    }
-
-    const fetchDepartements = async () => {
-      ApiService.get("/all/departements")
-        .then(({ data }) => {
-          console.log('departement',data);
-          const donnees = data.data.data;
-          departementOptions.value = donnees.map((departement) => {
-            return {
-              value: departement.id,
-              label: `${departement.libelle}`,
-            };
-          });
-        })
-        .catch(({ response }) => {
-          error(response.data.message);
-        });
-    };
-
-
-    const getAllServices = async () => {
-      try {
-        const response = await ApiService.get(
-          "/all/recupererToutesOrganisationSansFilsAvecParent"
-        );
-
-        console.log("rfrrf ===> ", response);
-        const servicesData = response.data.data;
-        console.log("465484635418416541 ===> ", servicesData);
-
-        serviceOptions.value = servicesData.map((service) => ({
-          value: service.id,
-          label: service.nom,
-        }));
-
-        console.log("RYYYYY ==> ", serviceOptions);
-      } catch (error) {
-        console.log("RYYYYY5252 ==> ", error);
-        //error(response.data.message)
-      }
-    };
-
-
-    
 const  getPersonnel = async (id: number) => {
             console.log(id, "Personnel")
             return ApiService.get("/personnel/" + id)
                 .then(({ data }) => {
                     const donnees = data.data;
                     console.log(donnees, 'donnéees');
-                    nom.value=donnees?.nom;
-                    prenom.value=donnees?.prenom;
+                    nom.value = donnees?.nom;
+                    prenom.value = donnees?.prenom;
+                    sexe.value = donnees?.sexe;
+                    dateEmbauche.value= donnees?.dateEmbauche;
+                    birthdate.value = donnees?.birthdate;
+                    boitePostale.value = donnees?.boitePostale;
                     civilite.value=donnees?.civilite;
                     email.value=donnees?.email;
                     telephone.value=donnees?.telephone;
@@ -607,18 +412,9 @@ const  getPersonnel = async (id: number) => {
                     adresse.value= donnees?.adresse;  
                     situationMatrimoniale.value=donnees?.situationMatrimoniale;
                     nationalite.value=donnees?.nationalite;
-                    departement.value=donnees?.departement.id;
-                    commune.value=donnees?.commune;
-                    arrondissement.value=donnees?.arrondissement;
-                    quartier.value=donnees?.quartier;
                     adresse.value=donnees?.adresse; 
                     ethnie.value=donnees?.ethnie.id;
                     personnelId.value = donnees?.id;
-                    if (donnees?.organisation_personnels?.length > 0) {
-        const lastOrg = donnees.organisation_personnels[donnees.organisation_personnels.length - 1];
-        organisation.value = lastOrg?.organisation?.id; 
-      }
-           
                 })
                 .catch(({ response }) => {
                     error(response.data.message)
@@ -626,26 +422,38 @@ const  getPersonnel = async (id: number) => {
         }
 
 const editPersonnel = async (values, { resetForm }) => {
-  console.log("Valeurs envoyées :", values);
-  try {
-    const response = await ApiService.put(`/personnels/${values.id}`, values);
-    if (response.status === 200) {
-      success(response.data.message);
-      resetForm();
-     router.push({ name: "DetailsPersonnelPage" });
+    try {
+        // ✅ Mapper religion et ethnie correctement
+        const payload = {
+            ...values,
+            religion: values.religion?.value ?? values.religion,
+            ethnie:   values.ethnie?.value   ?? values.ethnie,
+        };
+
+        // ✅ Supprimer les champs non désirés
+        delete payload.nomPersonneAContacter;
+        delete payload.prenomPersonneAContacter;
+        delete payload.telephonePersonneAContacter;
+        delete payload.relation;
+        delete payload.fonctions;
+
+        const response = await ApiService.put(`/personnels/${values.id}`, payload);
+
+        if (response.status === 200) {
+            success(response.data.message);
+            resetForm();
+            router.push({ name: "ViewPersonnellePage", params: { id: values.id } });
+        }
+    } catch (err) {
+        error(err.response?.data?.message || "Erreur lors de la modification.");
     }
-  } catch (error) {
-  //  console.error("Erreur lors de la modification :", error.response?.data?.message);
-  }
 };
 
 
 
     onMounted(async () => {
-      await  fetchDepartements();
       await getAllReligions();
       await getAllEthnies();
-      await getAllServices();
      if (route.params.id) {
        await getPersonnel(parseInt(route.params.id as string));
       }
@@ -655,21 +463,7 @@ const editPersonnel = async (values, { resetForm }) => {
       personnelSchema, 
       editPersonnel, 
       personnelForm, 
-      quartierOptions,
-      communeOptions,
-      departementOptions,
-      arrondissementOptions,
-      departementChange,
-      communeChange,
-      arrondissementChange,
-      selectedCommune,
-      selectedArrondissement,
-      selectedQuartier,
-      commune,
-      departement,
       adresse,
-      quartier,
-      arrondissement,
       countries: countriesRef,
       religionOptions,
       religion,
@@ -679,13 +473,15 @@ const editPersonnel = async (values, { resetForm }) => {
       situationMatrimoniale,
        nom,
      prenom,
-    email,
-     telephone,
-    telephone2,
-    civilite,
-    personnelId,
-    organisation,
-    serviceOptions
+      email,
+      telephone,
+      telephone2,
+      civilite,
+      personnelId,
+      dateEmbauche,
+      birthdate,
+      boitePostale,
+      sexe
 
 
     };

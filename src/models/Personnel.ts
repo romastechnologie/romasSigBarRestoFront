@@ -12,9 +12,8 @@ export  interface Personnel {
     prenom:string;
     situationMatrimoniale:string;
     sexe:string,
-    urlImage:string;
+    photoEmploye:string;
     civilite:string;
-    dateNais:Date;
     dateEmbauche:Date;
     numeroSecuriteSociale:number,
     nationalite:string;
@@ -22,8 +21,8 @@ export  interface Personnel {
     ethnies:string;
     services:string;
     fonction:string;
-    dateDebut:Date;
-    dateFin:Date;
+    dateDebutFonc:Date;
+    dateFinFonc:Date;
     personnel?:number; 
     birthdate:Date;
     bien?:number;
@@ -39,33 +38,10 @@ export  interface Personnel {
     arrondissement:string;
     quartier:string; 
     adresse:string;
-    nomConjoint:string;
-    prenomConjoint:string; 
-    birthdateConjoint:Date;
-    nationaliteConjoint:string;
-    telephoneConjoint:string; 
-    passeportConjoint:string; 
-    religionConjoint:string; 
-    ethnieConjoint:string;
-    nombreEnfant:number;
-    taille:string;
-    poids:string;
-    groupeSanguin:string; 
-    visionGauche:string; 
-    visionDroite:string;
-    auditionGauche:string;
-    auditionDroite:string;
-    mainGauche:string; 
-    mainDroite:string;
-    jambeGauche:string;
-    jambeDroite:string;
-    banque:string;
-    numeroCompte:string;
-    codeIban:string;
-    codeSwift:string;
     nomContact:string;
     telephoneContact:string;
     relationContact:string;
+ 
 
 
 
