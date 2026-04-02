@@ -4,7 +4,7 @@
     <div
       class="card-head box-shadow bg-white d-lg-flex align-items-center justify-content-between p-15 p-sm-20 p-md-25">
       <div class="d-sm-flex align-items-center">
-        <router-link class="btn btn-primary" to="/personnels/ajouter-personnel">
+        <router-link class="btn btn-primary" to="/personnelles/ajouter-personnel">
           <i class="fa fa-plus-circle"></i>
           Ajouter un personnel
         </router-link>
@@ -42,9 +42,6 @@
               <th scope="col" class="text-uppercase fw-medium shadow-none text-body-tertiary fs-13 pt-0">
                 Telephone
               </th>
-              <th scope="col" class="text-uppercase fw-medium shadow-none text-body-tertiary fs-13 pt-0">
-                Service
-              </th>
               <th scope="col" class="text-uppercase fw-medium shadow-none text-body-tertiary fs-13 pt-0 text pe-0">
                 ACTIONS</th>
             </tr>
@@ -70,10 +67,6 @@
               <td class="shadow-none lh-1 fw-medium text-black-emphasis">
                 {{ personnel.telephone }}
               </td>
-              <td class="shadow-none lh-1 fw-medium text-black-emphasis">
-                {{ personnel?.organisation_personnels?.[personnel.organisation_personnels.length - 1]?.organisation?.nom
-                  || "Non renseigné" }}
-              </td>
               <td class="shadow-none lh-1 fw-medium text-body-tertiary text pe-0">
                 <button class="btn dropdown-toggle btn-primary" type="button" data-bs-toggle="dropdown"
                   aria-expanded="false">Actions</button>
@@ -86,13 +79,6 @@
                           class="flaticon-pen lh-1 me-8 position-relative top-1"
                         ></i>Modifier</router-link>
                     </li>-->
-                  <li class="dropdown-item d-flex align-items-center">
-                    <a href="javascript:void(0);" data-bs-target="#create-task" data-bs-toggle="modal"
-                      @click="openModal(personnel.id)">
-                      <i class="fa fa-check-circle lh-1 me-8 position-relative top-1"></i>
-                      Affecter
-                    </a>
-                  </li>
                   <li class="dropdown-item d-flex align-items-center">
                     <router-link :to="{ name: 'ViewPersonnellePage', params: { id: personnel.id } }"
                       class="dropdown-item d-flex align-items-center">

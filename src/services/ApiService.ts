@@ -141,7 +141,11 @@ class ApiService {
     // }
     return ApiService.vueInstance.axios.patch(`${resource}`, params);
   }
-
+  static postBlob(resource: string, params: object): Promise<any> {
+    return ApiService.vueInstance.axios.post(resource, params, {
+      responseType: 'blob',
+    });
+  }
   /**
    * @description Send the DELETE HTTP request
    * @param resource: string

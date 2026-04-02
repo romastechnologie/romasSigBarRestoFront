@@ -132,6 +132,25 @@ const success = (message: string, temps: number = 5000) => {
   });
 }
 
+const calculerDuree = (heureReglementaire: string, heureArrivee: string): string => {
+  if (!heureReglementaire || !heureArrivee) return "";
+
+  const [heureR, minuteR] = heureReglementaire.split(":").map(Number);
+  const [heureA, minuteA] = heureArrivee.split(":").map(Number);
+
+  const dateR = new Date();
+  dateR.setHours(heureR, minuteR);
+
+  const dateA = new Date();
+  dateA.setHours(heureA, minuteA);
+
+  const differenceMs = dateA.getTime() - dateR.getTime();
+  const differenceMinutes = Math.floor(differenceMs / 60000);
+  const heures = Math.floor(differenceMinutes / 60);
+  const minutes = differenceMinutes % 60;
+
+  return `${heures.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+}
 const error = (message: string) => {
   Swal.fire({
     title: 'Erreur',
@@ -340,6 +359,6 @@ const supRowElement = (id: number, element: any, route: string, entite: string) 
 
 export {
   optionPointVente,
-  getCurrentDateTime,getDatePlusXDays,generateUuid,getUrlApiForProductFiles, ajouterPeriode, onFileChange, removeModalBackdrop, suppression, separateur, hideModal, getAssetPath, format_Date, showModal, format_date, success, error,warning,monSwal,getUrlApiForFiles,
+  getCurrentDateTime,getDatePlusXDays,generateUuid,getUrlApiForProductFiles, ajouterPeriode, onFileChange, removeModalBackdrop, suppression, separateur, hideModal, getAssetPath, format_Date, showModal, format_date, success, error,warning,monSwal,getUrlApiForFiles,calculerDuree,
 };
 

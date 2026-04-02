@@ -83,6 +83,17 @@ import EditTransactionPage from '@/pages/GesCom/Transaction/EditTransactionPage.
 import ViewTransactionPage from '@/pages/GesCom/Transaction/ViewTransactionPage.vue'
 
 import ListeDomaineActivitePage from '@/pages/GesCom/DomaineActivite/ListeDomaineActivitePage.vue'
+import AddRapportRelancePage from '@/pages/GesCom/RapportRelance/AddRapportRelancePage.vue'
+import ListeRapportRelancePage from '@/pages/GesCom/RapportRelance/ListeRapportRelancePage.vue'
+import ListeEcheancePage from '@/pages/GesCom/Echeance/ListeEcheancePage.vue'
+import ListePiecePage from '@/pages/GesCom/Piece/ListePiecePage.vue'
+import AddPiecePage from '@/pages/GesCom/Piece/AddPiecePage.vue'
+import AddClientAffecterPage from '@/pages/GesCom/ClientAffecter/AddClientAffecterPage.vue'
+import ListeClientAffecterPage from '@/pages/GesCom/ClientAffecter/ListeClientAffecterPage.vue'
+import EditClientAffecterPage from '@/pages/GesCom/ClientAffecter/EditClientAffecterPage.vue'
+import ListeContratPage from '@/pages/GesBar/Contrat/ListeContratPage.vue'
+import AddContratPage from '@/pages/GesBar/Contrat/AddContratPage.vue'
+import ViewContratPage from '@/pages/GesBar/Contrat/ViewContratPage.vue'
 import ClientsTransactionPage from '@/pages/GesCom/Client/ClientsTransactionPage.vue'
 import AddMagasinPage from '@/pages/GesCom/Magasin/AddMagasinPage.vue'
 import EditMagasinPage from '@/pages/GesCom/Magasin/EditMagasinPage.vue'
@@ -142,6 +153,13 @@ import ListeModeleSignatairePage from '@/pages/GesCom/ModeleSignataire/ListeMode
 import ListFonctionPage from '@/pages/GesCom/Fonction/ListFonctionPage.vue'
 import AddFonctionPage from '@/pages/GesCom/Fonction/AddFonctionPage.vue'
 import ConfirmationPaiementPage from '@/pages/GesCom/OuvFerm/ConfirmationPaiementPage.vue'
+import AddModeleContratPage from '@/pages/GesBar/ModeleContrat/AddModeleContratPage.vue'
+import EditModeleContratPage from '@/pages/GesBar/ModeleContrat/EditModeleContratPage.vue'
+import AddApercuContratPage from '@/pages/GesBar/ModeleContrat/AddApercuContratPage.vue'
+import ListeModeleContratPage from '@/pages/GesBar/ModeleContrat/ListeModeleContratPage.vue'
+import AddPresencePage from '@/pages/GesBar/Presences/AddPresencePage.vue'
+import EditPresencePage from '@/pages/GesBar/Presences/EditPresencePage.vue'
+import ListePresencePage from '@/pages/GesBar/Presences/ListePresencePage.vue'
 import ListeTablePage from '@/pages/GesCom/Table/ListeTablePage.vue'
 import AddTablePage from '@/pages/GesCom/Table/AddTablePage.vue'
 import ListeCategorieProduitPage from '@/pages/GesCom/CategorieProduit/ListeCategorieProduitPage.vue'
@@ -222,6 +240,117 @@ const routes: Array<RouteRecordRaw> = [
       },
     ]
   },
+    {
+    path: "/contrats",
+    component: BodyView,
+    children: [
+      {
+        path: "ajouter-contrat",
+        name: "AddContrat",
+        component: AddContratPage,
+        meta: {
+          title: 'Ajouter un contrat',
+        }
+      },
+      {
+        path: "liste-contrats",
+        name: "ListeContrat",
+        component: ListeContratPage,
+        meta: {
+          title: 'Liste des contrats',
+        }
+      },
+  
+      {
+        path: "view-contrat/:id",
+        name: "ViewContrat",
+        component: ViewContratPage,
+        meta: {
+          title: 'Détails d\'un Contrat',
+        }
+      },
+    ]
+  },
+         {
+    path: "/modeleContrat",
+    component: BodyView,
+    children: [
+      {
+        path: "ajouter-modelecontrat",
+        name: "AddModeleContratPage",
+        component: AddModeleContratPage,
+        meta: {
+          title: 'Ajouter un model contrat',
+        }
+      },
+      {
+        path: "liste-modeleContrat",
+        name: "ListeModeleContratPage",
+        component: ListeModeleContratPage,
+        meta: {
+          title: 'Liste des modeles contrats',
+        }
+      },
+       {
+        path: "apercu-modeleContrat/:id",
+        name: "AddApercuContratPage",
+        component: AddApercuContratPage,
+        meta: {
+          title: 'Aperçu contrat',
+        }
+      },
+
+        {
+        path: "modifier-modeleContrat/:id",
+        name: "EditModeleContratPage",
+        component: EditModeleContratPage,
+        meta: {
+          title: 'Modifier un modele de contrat ',
+        }
+      },
+      
+    ]
+  },
+  {
+    path: "/presences",
+    component: BodyView,
+    children: [
+      {
+        path: "ajouter-presence",
+        name: "AddPresencePage",
+        component: AddPresencePage,
+        meta: {
+          title: 'Ajouter une présence',
+        }
+      },
+      {
+        path: "liste-presence",
+        name: "ListePresencePage",
+        component: ListePresencePage,
+        meta: {
+          title: 'Liste des présences',
+        }
+      },
+      {
+        path: "edit-presence/:id",
+        name: "EditPresencePage",
+        component: EditPresencePage,
+        meta: {
+          title: 'Modifier une présence',
+        }
+      }
+      // {
+      //   path: "presencepersonnel",
+      //   name: "Presencepersonnel",
+      //   component: BookmarkSearch,
+      //   meta: {
+      //     title: 'Modifier une présence',
+      //   }
+
+      // }
+    ]
+  },
+  
   {
     path: "",
     component: BodyView,

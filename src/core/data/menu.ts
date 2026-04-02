@@ -179,8 +179,69 @@ export const menu: MenuItem[] = [
         ]
     },
 
-
-  
+    {
+        title: "Personnel",
+        icon: "stroke-user",
+        icon1: "fill-user",
+        type: "sub",
+        badgeType: "light-primary",
+        active: false,
+        isPinned: false,
+        children: [
+            {
+                path: "/personnelles/ajouter-personnel",
+                title: "Ajouter un personnel",
+                type: "link"
+            },
+            {
+                path: "/personnelles/liste-personnel",
+                title: "Liste des personnels",
+                type: "link"
+            },
+        ]
+    },
+    {
+        title: "Contrat",
+        icon: "stroke-user",
+        icon1: "fill-user",
+        type: "sub",
+        badgeType: "light-primary",
+        active: false,
+        isPinned: false,
+        children: [
+            {
+                path: "/contrats/ajouter-contrat",
+                title: "Ajouter un contrat",
+                type: "link"
+            },
+            {
+                path: "/contrats/liste-contrats",
+                title: "Liste des contrats",
+                type: "link"
+            },
+        ]
+    },
+    {
+        title: "Presence",
+        icon: "stroke-user",
+        icon1: "fill-user",
+        type: "sub",
+        badgeType: "light-primary",
+        active: false,
+        isPinned: false,
+        children: [
+            {
+                path: "/presences/ajouter-presence",
+                title: "Ajouter une présence",
+                type: "link"
+            },
+            {
+                path: "/presences/liste-presence",
+                title: "Liste des présences",
+                type: "link"
+            },
+        ]
+    },
     
     {
         title: "Vente",
