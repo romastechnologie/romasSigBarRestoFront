@@ -22,7 +22,7 @@ class ApiService {
     ApiService.vueInstance = app;
     ApiService.vueInstance.use(VueAxios, axios);
     //ApiService.vueInstance.axios.defaults.baseURL ='https://gescom.somimas.com:3000/api';
-    ApiService.vueInstance.axios.defaults.baseURL = 'http://localhost:3005/api';
+    ApiService.vueInstance.axios.defaults.baseURL = 'http://localhost:3008/api';
     ApiService.vueInstance.axios.defaults.headers.common["Accept"] = "application/json";
     ApiService.vueInstance.axios.defaults.headers.common["Content-Type"] = "application/json";
     ApiService.vueInstance.use(VueAxios, axios);
