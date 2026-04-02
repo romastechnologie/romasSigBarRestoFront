@@ -1095,7 +1095,7 @@ export default defineComponent({
       valuess, modeDefPrix, selectGroupe, images, conditionnementOptions,
       prixProd, selectConditionnement, isDisable, isDisablee, getCurrentDate,
       isDisableCha, onFileChange, dropzoneOptions, onFileAdd, onFileRemove,
-      onSuccess, onError, defaultImage, chamsdescritifs, selectFamille,produitOptions,
+      onSuccess, onError, defaultImage, chamsdescritifs, selectFamille,
       metSchema, triggerFileInput, onFilePrinChange, removeImage, imagePreview,
       imageFile, fileInput, uniteStock, domaineOptions, pays,
       showBox, showBoxM, showBoxStan, dropdownRef, dropdownRef1, dropdownRef2,
