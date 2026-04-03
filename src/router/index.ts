@@ -167,6 +167,7 @@ import AddMetPage from '@/pages/GesCom/Met/AddMetPage.vue'
 import EditMetPage from '@/pages/GesCom/Met/EditMetPage.vue'
 import ListeMetPage from '@/pages/GesCom/Met/ListeMetPage.vue'
 import ViewMetPage from '@/pages/GesCom/Met/ViewMetPage.vue'
+import ListeFamillePage from '@/pages/GesCom/Familles/ListeFamillePage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -425,12 +426,21 @@ const routes: Array<RouteRecordRaw> = [
           title: 'Ajout des prix produits',
         }
       },
+       
       {
-        path: "ajout-prix",
+        path: "ajout-prixproduits",
         name: "AddPrixProduitCondTypeClients2",
         component: AddPrixProduitCondTypeClientPage2,
         meta: {
-          title: 'Ajouter des prix par categorieclient',
+          title: 'Ajouter des prix par famille',
+        }
+      },
+      {
+        path: "liste-prixproduits",
+        name: "ListePrixProduitCondtionnementTypeClients",
+        component: ListePrixProduitCondTypeClientPage,
+        meta: {
+          title: 'Liste des prix produits',
         }
       },
       {
@@ -628,20 +638,20 @@ const routes: Array<RouteRecordRaw> = [
       }
     ]
   },
-  // {
-  //   path: "/familles",
-  //   component: BodyView,
-  //   children: [
-  //     {
-  //       path: "liste-familles",
-  //       name: "ListeFamille",
-  //       component: ListeFamillePage,
-  //       meta: {
-  //         title: 'Liste des familles',
-  //       }
-  //     },
-  //   ]
-  // },
+  {
+    path: "/familles",
+    component: BodyView,
+    children: [
+      {
+        path: "liste-familles",
+        name: "ListeFamille",
+        component: ListeFamillePage,
+        meta: {
+          title: 'Liste des familles',
+        }
+      },
+    ]
+  },
   {
     path: "/produits",
     component: BodyView,

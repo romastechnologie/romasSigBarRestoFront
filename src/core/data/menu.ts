@@ -68,6 +68,8 @@ export const menu: MenuItem[] = [
                 isPinned: false,
                 //role: "ListFamille"
             },
+            
+
             {
                 path: "/conditionnements/liste-conditionnements",
                 title: "conditionnements",
@@ -90,6 +92,41 @@ export const menu: MenuItem[] = [
 
         ]
     },
+    
+    {
+        title: "Definition de prix",
+        icon: "stroke-user",
+        icon1: "fill-user",
+        type: "sub",
+        badgeType: "light-primary",
+        active: false,
+        isPinned: false,
+       //role: "ListeClient|ListeContrat|AddContrat|ListCompte|AddCompte|AddClient|ListeMesClients",
+        children: [
+            {
+                path: "/prixproduits/ajout-prixfamille",
+                title: "Ajouter un prix",
+                type: "link",
+                icon: "stroke-learning",
+                icon1: "fill-learning",
+                isPinned: false,
+              // role: "ListeClient"
+            },
+    
+             
+             {
+                path: "/prixproduits/list-prixfamille",
+                title: "Liste des prix",
+                type: "link",
+                icon: "stroke-learning",
+                icon1: "fill-learning",
+                isPinned: false,
+              // role: "ListeMesClients"
+            },
+            
+        ]
+    },
+
 {
         title: "Gestion des mets",
         icon: "stroke-user",

@@ -107,14 +107,14 @@
                     </router-link>
                   </li>
                 
-<!--
+
                    <li class="dropdown-item d-flex align-items-center">
                     <router-link  class="dropdown-item d-flex align-items-center`"
                     :to="`/prixproduits/ajout-prix?definiPrixId=${produit.id}`"
                     >
                       <i class="flaticon-eye lh-1 me-8 position-relative top-1"></i>Définir un prix par catégorie
                     </router-link>
-                  </li>-->
+                  </li>
 
                   <li class="dropdown-item d-flex align-items-center">
                     <router-link
